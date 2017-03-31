@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.concurrent.TimeUnit;
 
 import com.google.common.io.ByteStreams;
 
@@ -67,7 +68,15 @@ public class Main extends Plugin {
 		this.addCommand(new UBL());
 		new Listeners(this, new ConnectionHandler());
 		
-		new Bans();
+		int interval = 60;
+		if(config.contains("interval"))
+			interval = config.getInt("interval");
+		
+		this.getProxy().getScheduler().schedule(this, new Runnable() {
+			public void run() {
+				new Bans();
+			}
+		}, 0, interval, TimeUnit.MINUTES);
 	}
 	
 	private void addCommand(Command command) {
