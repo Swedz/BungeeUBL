@@ -62,6 +62,7 @@ public class Bans {
 		});
 	}
 	
+	//The way I'm doing the parsing seems a little annoying ... I'll try to see if there's a better way to do it in the future.
 	public static class Parser {
 		private static int getMonthIndex(String m) {
 			switch(m) {
