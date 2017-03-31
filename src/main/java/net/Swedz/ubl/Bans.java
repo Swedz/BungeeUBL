@@ -18,6 +18,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class Bans {
+	//This API key is read only. Don't worry ;P
 	private static final String URL = "https://docs.google.com/spreadsheet/ccc?key=0AjACyg1Jc3_GdEhqWU5PTEVHZDVLYWphd2JfaEZXd2c&output=csv";
 	public static HashMap<String, String> list = new HashMap<String, String>();
 	public static boolean updating = false;
