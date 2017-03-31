@@ -10,8 +10,9 @@ servers:
   - uhc1
   - uhc2
   - uhc3
+interval: 60
 ```
-This will make the plugin take effect on the servers "uhc1", "uhc2" and "uhc3".
+This will make the plugin take effect on the servers "uhc1", "uhc2" and "uhc3". It will also automatically update the UBL list every 60 minutes (1 hour).
 
 ## APIs Used
 I used the following APIs in this project:
