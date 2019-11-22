@@ -1,4 +1,4 @@
-package net.Swedz.ubl;
+package net.swedz.ubl;
 
 import java.util.HashMap;
 
